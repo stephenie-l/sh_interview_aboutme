@@ -1,0 +1,242 @@
+echo "# sh_interview_aboutme" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/stephenie-l/sh_interview_aboutme.git
+git push -u origin main
+
+
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>About: Stephenie Liew</title>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+    #top_button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #E5F6A8;
+        color: #606F27;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 6px;
+    }       
+
+    #top_button:hover {
+    background-color: pink;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Georgia', serif;
+    }
+
+    body {background-color: #FEFFDD;}
+
+    h1 {
+        color: #FEFFDD;
+        font-family: georgia, serif;
+        font-size: 250%;
+
+    }
+    p  {
+        color: #334435;
+        font-family: georgia, serif;
+        font-size: 100%;
+    }
+
+    h2 {
+        color: #334435;
+        font-family: georgia, serif;
+        font-size: 130%;
+    }
+
+    h3 {
+        color: #334435;
+        font-family: georgia, serif;
+        font-size: 100%;
+    }
+
+    h4 {
+        color: #FEFFDD;
+        font-family: georgia, serif;
+        font-size: 80%;
+    }
+
+    /* Style the header */
+    header {
+        background-color: #697A4E;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: #FEFFDD;
+    }
+
+    /* Create two columns/boxes that floats next to each other */
+    nav {
+        float: left;
+        width: 30%;
+        /*height: 300px;  only for demonstration, should be removed */
+        background: #D9E8C1;
+        padding: 20px;
+    }
+
+    /* Style the list inside the menu */
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    article {
+        float: left;
+        padding: 20px;
+        width: 70%;
+        background-color: #EFF4E7;
+        /*height: 300px;  only for demonstration, should be removed */
+    }
+
+    /* Clear floats after the columns */
+    section::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Style the footer */
+    footer {
+        background-color: #697A4E;
+        padding: 10px;
+        text-align: center;
+        color: white;
+    }
+
+    /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+    @media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+    }
+
+    a:link {
+        color: green;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:visited {
+        color: gray;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:hover {
+        color: pink;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    a:active {
+        color: yellow;
+        background-color: transparent;
+        text-decoration: underline;
+        
+    </style>
+    </head>
+
+    <body>
+
+    <header>
+    <h1>About Me</h1>
+    </header>
+
+    <section>
+    <nav>
+        <h3><a href = "#H1">Hello!</a></h3>
+        <h3><a href = "#H2">My Intro</a></h3>
+        <h3><a href = "#H3">Contact Me!</a></h3>
+
+    </nav>
+    
+    <article>
+        <h2 id="H1"></h2>
+        <p>Hello, I am StephEnie. Welcome to my <i>About</i> page!</p>
+
+        <img src="Stephenie_SH_Photo.jpeg" alt="Stephenie's Photo" width="500" height="625"><br>
+        <p>&nbsp</p>
+
+        <h2 id="H2">A Little Bit About Me...</h2>
+        <p>I'm currently a sophomore studying at Northwestern University, majoring in Computer Science
+            and minoring in Data Science. I'm from Vancouver, Canada, but I've also lived in Beijing, China
+            as well as San Jose, California. Some of my hobbies include art, baking, and volleyball. I really hope to join
+            the Student Holdings team and do great things with you guys!<br>
+            <br>About my involvement elsewhere, I've been working closely with a student-based nonprofit named<a href="https://www.t2sa.ca/" 
+            target = "_blank"> T2SA Society</a> for four years now. Aside from that, the career paths I'm exploring right now
+            are UI/UX, app development, and project management. I also anticipate to learn a lot at Student Holdings if I will be able
+            to secure a role.<p><br>
+
+
+        <h2 id="H3">Contact Me!</h2>
+        <p>Please contact me if you have any follow up questions or would need more information. <br>
+           <br>Mobile: 872-235-5819 <br>
+           Email: stephenieliew2024@u.northwestern.edu
+        </p>
+
+    </article>
+    </section>
+
+    <footer>
+    <h4>Stephenie_Liew @ 2021</h4>
+    </footer>
+
+        <p>Click <a href="https://www.linkedin.com/in/stephenieliew2024/" target = "_blank"><b>here</b></a> for my LinkedIn profile!</p>
+
+    </body>
+
+    <body>
+
+    <button onclick="topFunction()" id="top_button" title="Go to top">Top</button>
+
+    <script>
+    //Get the button
+    var mybutton = document.getElementById("top_button");
+
+    // When the user scrolls down 10px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+    </body>
+
+
+</html>
