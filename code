@@ -23,6 +23,7 @@ git push -u origin main
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <style>
+    /* Creating scroll to top button*/
     #top_button {
         display: none;
         position: fixed;
@@ -43,6 +44,8 @@ git push -u origin main
     background-color: pink;
     }
 
+    /* Basic setup*/
+
     * {
         box-sizing: border-box;
     }
@@ -53,6 +56,7 @@ git push -u origin main
 
     body {background-color: #FEFFDD;}
 
+    /* Setting up header and paragraph elements*/
     h1 {
         color: #FEFFDD;
         font-family: georgia, serif;
@@ -83,7 +87,7 @@ git push -u origin main
         font-size: 80%;
     }
 
-    /* Style the header */
+    /* Styling the header */
     header {
         background-color: #697A4E;
         padding: 30px;
@@ -92,16 +96,15 @@ git push -u origin main
         color: #FEFFDD;
     }
 
-    /* Create two columns/boxes that floats next to each other */
+    /* Creating two columns/boxes that floats next to each other */
     nav {
         float: left;
         width: 30%;
-        /*height: 300px;  only for demonstration, should be removed */
         background: #D9E8C1;
         padding: 20px;
     }
 
-    /* Style the list inside the menu */
+    /* Styling text in the menu */
     nav ul {
         list-style-type: none;
         padding: 0;
@@ -112,17 +115,16 @@ git push -u origin main
         padding: 20px;
         width: 70%;
         background-color: #EFF4E7;
-        /*height: 300px;  only for demonstration, should be removed */
     }
 
-    /* Clear floats after the columns */
+    /* Clearing floats after the columns */
     section::after {
         content: "";
         display: table;
         clear: both;
     }
 
-    /* Style the footer */
+    /* Styling the footer */
     footer {
         background-color: #697A4E;
         padding: 10px;
@@ -130,7 +132,7 @@ git push -u origin main
         color: white;
     }
 
-    /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+    /* Making the two columns stack on top of each other on small screens */
     @media (max-width: 600px) {
     nav, article {
         width: 100%;
@@ -138,6 +140,7 @@ git push -u origin main
     }
     }
 
+    /* Setting up hyperlink versions*/
     a:link {
         color: green;
         background-color: transparent;
@@ -186,11 +189,11 @@ git push -u origin main
         <p>I'm currently a sophomore studying at Northwestern University, majoring in Computer Science
             and minoring in Data Science. I'm from Vancouver, Canada, but I've also lived in Beijing, China
             as well as San Jose, California. Some of my hobbies include art, baking, and volleyball. I really hope to join
-            the Student Holdings team and do great things with you guys!<br>
-            <br>About my involvement elsewhere, I've been working closely with a student-based nonprofit named<a href="https://www.t2sa.ca/" 
-            target = "_blank"> T2SA Society</a> for four years now. Aside from that, the career paths I'm exploring right now
-            are UI/UX, app development, and project management. I also anticipate to learn a lot at Student Holdings if I will be able
-            to secure a role.<p><br>
+            the Student Holdings team and do great things with the team!<br>
+            <br>Outside of classes, I have been working closely with a student-based nonprofit named<a href="https://www.t2sa.ca/" 
+            target = "_blank"> T2SA Society</a> as its founder and director for four years now. Aside from that, I recently became involved
+            with a startup named ClubSpot as their front end developer. Career paths that I am exploring right now include those of UI/UX designers, 
+            software developers, and project managers.<p><br>
 
 
         <h2 id="H3">Contact Me!</h2>
@@ -218,7 +221,7 @@ git push -u origin main
     //Get the button
     var mybutton = document.getElementById("top_button");
 
-    // When the user scrolls down 10px from the top of the document, show the button
+    // Only shows button when the user scrolls down 10px from the top of the document
     window.onscroll = function() {scrollFunction()};
 
     function scrollFunction() {
@@ -229,7 +232,7 @@ git push -u origin main
     }
     }
 
-    // When the user clicks on the button, scroll to the top of the document
+    // Scrolls to the top of the document when the user clicks on the button
     function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
